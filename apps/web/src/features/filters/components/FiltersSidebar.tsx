@@ -41,21 +41,25 @@ export function FiltersSidebar({
           {t("district")}
         </Label>
 
-        <Select value={value.district} onValueChange={(v) => onChange({ ...value, district: v })}>
-          <SelectTrigger className="border-2 hover:border-violet-300 transition-colors">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all" className="font-semibold">
-              ✨ {t("all")}
-            </SelectItem>
-            {districts.map((d) => (
-              <SelectItem key={d} value={d}>
-                {d}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <Select
+  value={value.district}
+  onValueChange={(v) => onChange({ ...value, district: v })}
+>
+  <SelectTrigger className="border-2 bg-white text-slate-900 hover:border-violet-300">
+    <SelectValue />
+  </SelectTrigger>
+
+  <SelectContent className="bg-white text-slate-900 border border-slate-200 shadow-lg">
+    <SelectItem value="all" className="font-semibold focus:bg-slate-100">
+      ✨ {t("all")}
+    </SelectItem>
+    {districts.map((d) => (
+      <SelectItem key={d} value={d} className="focus:bg-slate-100">
+        {d}
+      </SelectItem>
+    ))}
+  </SelectContent>
+</Select>
       </div>
 
       {/* Category Filter */}

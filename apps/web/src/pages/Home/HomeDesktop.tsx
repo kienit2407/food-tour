@@ -65,7 +65,7 @@ export default function HomeDesktop() {
     };
 
     return (
-        <div className="min-h-screen bg-background relative overflow-hidden">
+        <div className="min-h-max bg-background relative overflow-x-hidden">
             {/* Animated Background Blobs */}
             <div className="absolute top-0 left-0 w-96 h-96 gradient-accent rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
             <div className="absolute top-0 right-0 w-96 h-96 gradient-food rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />

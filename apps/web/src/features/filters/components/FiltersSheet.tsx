@@ -32,11 +32,10 @@ export function FiltersSheet({
                 </Button>
             </SheetTrigger>
 
-            {/* ✅ max height + flex-col để header không bị scroll chung */}
+            {/* max height + flex-col để header không bị scroll chung */}
             <SheetContent
                 side="bottom"
-                className="p-0 rounded-t-3xl border-t-4 border-violet-500 max-h-[85vh] flex flex-col
-    bg-white text-black"
+                className="p-0 rounded-t-3xl border-t-4 border-violet-500 max-h-[85vh] flex flex-col bg-white text-black"
             >
                 <div className="h-1.5 gradient-accent" />
 
