@@ -85,7 +85,7 @@ export default function HomeMobile() {
 
                     <div className="flex items-center justify-between gap-3">
                         <p className="text-sm text-muted-foreground">
-                            Khám phá ẩm thực Sài Gòn
+                            Khám phá ẩm thực Sài Gòn với <span className=" font-bold text-[16px] text-pink-500 animate-pulse">420</span> quán
                         </p>
 
                         <div className="flex items-center gap-2">

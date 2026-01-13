@@ -1,8 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useI18n } from "@/i18n/i18n";
 import { formatVND } from "@/lib/format";
-import { MapPin, Utensils, Wallet, Clock, ArrowRight } from "lucide-react";
+import { MapPin, Utensils, Wallet, Clock } from "lucide-react";
 import type { PlaceCardModel } from "@/features/places/types";
 import { Link } from "react-router-dom";
 
@@ -15,9 +13,9 @@ function priceText(p: PlaceCardModel) {
 }
 
 export function PlaceCard({ data }: { data: PlaceCardModel }) {
-  const { t } = useI18n();
 
   return (
+    <Link to={`/places/${data.placeId}`} className="block">
     <Card className="group hover-lift overflow-hidden border-2 hover:border-violet-200 transition-all duration-300 animate-slide-up">
       {/* Gradient Accent Bar */}
       <div className="h-1.5 gradient-accent" />
@@ -26,7 +24,7 @@ export function PlaceCard({ data }: { data: PlaceCardModel }) {
         <div className="flex items-start justify-between gap-4 mb-4">
           <div className="min-w-0 flex-1">
             {/* Place Name with Gradient on Hover */}
-            <h3 className="text-xl font-black truncate mb-2 group-hover:text-gradient-food transition-all">
+            <h3 className="text-xl font-black mb-2 group-hover:text-gradient-food transition-all">
               {data.placeName}
             </h3>
 
@@ -49,7 +47,7 @@ export function PlaceCard({ data }: { data: PlaceCardModel }) {
           </div>
 
           {/* View Detail Button */}
-          <Button
+          {/* <Button
             asChild
             size="sm"
             className="gradient-accent hover:shadow-glow shrink-0 font-semibold group/btn text-white"
@@ -58,7 +56,7 @@ export function PlaceCard({ data }: { data: PlaceCardModel }) {
               {t("view_detail")}
               <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform text-white" />
             </Link>
-          </Button>
+          </Button> */}
         </div>
 
         {/* Info Grid */}
@@ -100,5 +98,6 @@ export function PlaceCard({ data }: { data: PlaceCardModel }) {
         </div>
       </CardContent>
     </Card>
+    </Link>
   );
 }

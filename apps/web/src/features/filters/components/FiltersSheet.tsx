@@ -37,7 +37,6 @@ export function FiltersSheet({
                 side="bottom"
                 className="p-0 rounded-t-3xl border-t-4 border-violet-500 max-h-[85vh] flex flex-col bg-white text-black"
             >
-                <div className="h-1.5 gradient-accent" />
 
                 <SheetHeader className="p-6 pb-4 shrink-0">
                     <SheetTitle className="text-xl font-black text-gradient flex items-center gap-2">

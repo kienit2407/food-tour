@@ -49,7 +49,7 @@ export function FiltersSidebar({
     <SelectValue />
   </SelectTrigger>
 
-  <SelectContent className="bg-white text-slate-900 border border-slate-200 shadow-lg">
+  <SelectContent className="max-h-[30vh] overflow-y-auto bg-white text-slate-900 border border-slate-200 shadow-lg">
     <SelectItem value="all" className="font-semibold focus:bg-slate-100">
       ✨ {t("all")}
     </SelectItem>
@@ -138,7 +138,7 @@ export function FiltersSidebar({
   // ✅ Desktop Sidebar: giữ nguyên UI đẹp + sticky
   return (
     <Card className="sticky top-24 border-2 hover:border-violet-200 transition-all duration-300 overflow-hidden">
-      <div className="h-1.5 gradient-accent" />
+
       <CardHeader className="pb-4">
         <CardTitle className="text-lg font-black text-gradient flex items-center gap-2">
           🎯 {t("filters")}

@@ -96,9 +96,10 @@ export default function HomeDesktop() {
                             </div>
 
                             <div className="flex items-center gap-3 flex-wrap">
-                                <p className="text-muted-foreground">
-                                    Khám phá những địa điểm ẩm thực tuyệt vời tại Sài Gòn
+                                <p className="text-sm text-muted-foreground">
+                                    Khám phá ẩm thực Sài Gòn với <span className=" font-bold text-[16px] text-pink-500 animate-pulse">420</span> quán
                                 </p>
+
 
                                 <Badge variant="secondary" className="gap-1.5 px-3 py-1">
                                     <TrendingUp className="h-3.5 w-3.5" />
